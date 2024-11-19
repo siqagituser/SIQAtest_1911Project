@@ -16,6 +16,11 @@ packages:
 - name: WmJDBCAdapter
   wpmServer: https://packages.webmethods.io
   wpmRegistry: softwareag
+- name: PackX
+  gitServerName: SIQAPsur
+  gitUrl: https://github.com/prabhakarsag
+  gitUsername: prabhakarsag
+  gitBranch: main
 services:
 - serviceName: project.siqatest_1911.integrations:SIQAAdapterFlow
   packages:
@@ -30,32 +35,6 @@ services:
   - name: TPP_services_in_FCS
     version: "1.0"
 configurationVariables:
-  ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.databaseName
-  : SIQACloud
-  jdbc.jdbcTestPool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/jdbcTestPool.log;ddtdbg.ProtocolTraceShowTime=true
-  ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.user
-  : sa
-  jdbc.jdbcTestPool.maxConns: "10"
-  jdbc.jdbcTestPool.userid: root
-  ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolIncrementSize
-  : "1"
-  jdbc.jdbcTestPool.spyenabled: "false"
-  ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionEnabled
-  : "false"
-  jdbc.jdbcTestPool.snoopenabled: "false"
-  ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.expireTimeout
-  : "1000"
-  ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.networkProtocol
-  : tcp
-  ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.password
-  : "{AES}B2Xqma4Ost5nVUiXctJydQ=="
-  ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.blockingTimeout
-  : "1000"
-  jdbc.jdbcTestPool.spyparms: SpyAttributes=(log=(file)logs/spy/jdbcTestPool.log;logTName=yes;timestamp=yes)
-  ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.maximumPoolSize
-  : "10"
-  ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.portNumber
-  : "1433"
   jdbc.jdbcTestPool.waitingThread: "0"
   ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.dbType
   : MSSQL
@@ -69,6 +48,13 @@ configurationVariables:
   : LOCAL_TRANSACTION
   ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.otherProperties
   : loginTimeout=60;driverType=thin;
+  ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.databaseName
+  : SIQACloud
+  jdbc.jdbcTestPool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/jdbcTestPool.log;ddtdbg.ProtocolTraceShowTime=true
+  ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.user
+  : sa
+  jdbc.jdbcTestPool.maxConns: "10"
+  jdbc.jdbcTestPool.userid: root
   ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.minimumPoolSize
   : "1"
   ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolable
@@ -76,11 +62,28 @@ configurationVariables:
   jdbc.jdbcTestPool.driverAlias: MySQL Database Java Connector Driver
   ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupBackoffSecs
   : "10"
+  ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolIncrementSize
+  : "1"
+  jdbc.jdbcTestPool.spyenabled: "false"
   ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.driverType
   : Progress® DataDirect®
   ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.datasourceClass
   : com.wm.dd.jdbcx.sqlserver.SQLServerDataSource
+  ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionEnabled
+  : "false"
+  jdbc.jdbcTestPool.snoopenabled: "false"
+  ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.expireTimeout
+  : "1000"
+  ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.networkProtocol
+  : tcp
+  ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.password
+  : "{AES}B2Xqma4Ost5nVUiXctJydQ=="
+  ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.blockingTimeout
+  : "1000"
   jdbc.jdbcTestPool.password: "{AES}er+I3U8nDVm8F4DBRST1+A=="
+  jdbc.jdbcTestPool.spyparms: SpyAttributes=(log=(file)logs/spy/jdbcTestPool.log;logTName=yes;timestamp=yes)
+  ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.maximumPoolSize
+  : "10"
   jdbc.jdbcTestPool.dbURL: jdbc:mysql://mysql.test.local:3306/webm
   jdbc.jdbcTestPool.poolThreshold: "0"
   ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.serverName
@@ -90,3 +93,5 @@ configurationVariables:
   ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupRetryCount
   : "0"
   jdbc.jdbcTestPool.useSSL: "false"
+  ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.portNumber
+  : "1433"
