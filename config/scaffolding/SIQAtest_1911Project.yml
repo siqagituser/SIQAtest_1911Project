@@ -11,7 +11,7 @@ packages:
   gitServerName: SIQA_kvv_wm_io
   gitUrl: https://github.webmethods.io/kvv
   gitUsername: kvv
-  gitBranch: main
+  gitBranch: one_service
 configurationVariables:
   jdbc.jdbcTestPool.waitingThread: "0"
   jdbc.jdbcTestPool.minConns: "0"
