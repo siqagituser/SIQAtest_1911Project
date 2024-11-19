@@ -17,38 +17,18 @@ packages:
   wpmServer: https://packages.webmethods.io
   wpmRegistry: softwareag
 services:
-- serviceName: project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_1
-  packages:
-  - name: SIQAtest_1911Project
-    version: "1.0"
-  - name: TPP_services_in_FCS
-    version: "1.0"
-- serviceName: project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:DBInsert
-  packages:
-  - name: SIQAtest_1911Project
-    version: "1.0"
-  - name: TPP_services_in_FCS
-    version: "1.0"
 - serviceName: project.siqatest_1911.integrations:SIQAAdapterFlow
   packages:
   - name: SIQAtest_1911Project
     version: "1.0"
   - name: TPP_services_in_FCS
     version: "1.0"
-- serviceName: project.siqatest_1911.integrations:Sum
+- serviceName: project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:testJDBC1911
   packages:
   - name: SIQAtest_1911Project
     version: "1.0"
   - name: TPP_services_in_FCS
     version: "1.0"
-- serviceName: pub.math:addInts
-  packages:
-  - name: WmPublic
-    version: 11.1.0.0.2020
-- serviceName: pub.flow:debugLog
-  packages:
-  - name: WmPublic
-    version: 11.1.0.0.2020
 configurationVariables:
   ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.databaseName
   : SIQACloud
