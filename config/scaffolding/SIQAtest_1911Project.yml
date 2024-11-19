@@ -35,12 +35,12 @@ services:
   - name: TPP_services_in_FCS
     version: "1.0"
 configurationVariables:
-  jdbc.jdbcTestPool.waitingThread: "0"
   ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.dbType
   : MSSQL
-  jdbc.jdbcTestPool.minConns: "0"
+  jdbc.jdbcTestPool.waitingThread: "0"
   ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.trustStore
   : ""
+  jdbc.jdbcTestPool.minConns: "0"
   ? artConnection.SIQAtest_1911Project.project.siqatest_1911.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.heartBeatInterval
   : "0"
   jdbc.jdbcTestPool.expireTime: "60000"
